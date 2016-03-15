@@ -1,4 +1,4 @@
-See first the ruby article. Permission errors and other dependency problems may arise if a user copy of Ruby isn't installed. 
+See first the [ruby article](https://github.com/swhalley/KnowledgeBase/blob/master/Ruby_Install.md). Permission errors and other dependency problems may arise if a user copy of Ruby isn't installed. 
 
 * Most recent updates here https://jekyllrb.com/docs/quickstart/
 * Install `gem install jekyll`
