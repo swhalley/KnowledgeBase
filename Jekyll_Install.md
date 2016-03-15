@@ -1,11 +1,13 @@
 See first the [ruby article](https://github.com/swhalley/KnowledgeBase/blob/master/Ruby_Install.md). Permission errors and other dependency problems may arise if a user copy of Ruby isn't installed. 
 
-* Most recent updates here https://jekyllrb.com/docs/quickstart/
-* Install `gem install jekyll`
+### Jekyll Install 
+* If Ruby is installed ok, it should be as simple as running `gem install jekyll` from a command line
+
+Most recent updates here https://jekyllrb.com/docs/quickstart/
 
 Creating a new project or running from command line, see the Jekyll documentation
 
-###Webstorm integration - Add Jekyll Launcher
+### Webstorm integration - Add Jekyll Launcher
 * Preferences (command + ,)
 * External Tools
 * Add (+)
