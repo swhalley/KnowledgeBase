@@ -12,4 +12,4 @@ Mac install be default, has a ruby install. This is installed in a folder that i
 * Check the ruby manager to make sure proper version is running `rbenv local`
     * If needed, change the version 'rbenv local 2.3.0`
 * Check ruby version `ruby -v`
-* Check path to where ruby gems are stored `gem env home`
+* Check path to where ruby gems are stored `gem env home`. This can be useful if you are having permission issues installing gems. by using rbenv, the directory is most likely in the users home folder
