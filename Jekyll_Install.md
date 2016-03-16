@@ -19,3 +19,6 @@ Creating a new project or running from command line, see the Jekyll documentatio
         * Use a variable `insert macro` and choose ProjectFileDir, Projectpath, or another choice which points to your jekyll project
         
 At this point, launch the application normall. use `run` `edit configuration` `new` pick a javascript runner/debug and in the URL field put in `http://127.0.0.1:4000` which is the URL that jekyll will serve from by default
+
+### Working with Multiple Environments
+Best way may be to set the `--config _config.yml` on the command line. this is done as part of the `jekyll serve --config _config.yml`. This way we can have a local and prod version. Add this to the Webstorm integration as well to work easier in local environment
