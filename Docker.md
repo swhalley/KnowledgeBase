@@ -32,3 +32,29 @@ Create a Dockerfile. This example is taken from the offical Nodejs documentation
     COPY . /usr/src/app
     EXPOSE 8080
     CMD [ "npm", "start" ]
+
+Create a node app and package.json file in the same directory. The node app will be brought in as part of the build process. This really isn't ideal for development purposes. Eventually we will want to mount a directory and/or pull from github when building an image.
+
+Next build the image. By building the image you are pulling down the argon build of node (`FROM node:argon`) which is a current long term support version as well as OS data that was chosen by the node team. We could have built this out on a lower level and picked the OS and version of node ourselves, but why bother.
+
+Go to the directory where your docker file is hosted and run the following. This builds, lists and runs the image
+    
+    docker build -t swhalley/myFirstDockerImage .
+    docker images
+    docker run -p 49160:8080 -d swhalley/myFirstDockerImage
+    docker ps
+
+The final command, `docker ps` will list the running container and show you that the port that is exposed.
+The command `-p 49160:8080` maps the internal docker port 8080 to the external port 49160 of your machine.
+
+If your node app started a server, you can now hit the running docker container. The URL to the Docker container on mac can be found using `docker-machine ls` which will show you the installed vm's and their IP address. MAC is different from Linux installs, because there is no true native support. If using linux the IP would have been bound to 0.0.0.0 (aka localhost).
+
+#Mount Directory
+
+#Github integration with Docker
+
+#Frustrating Errors I ran into
+###Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+This is caused because the docker default vm isn't running. To solve the problem run the following command
+    
+    docker-machine start default
