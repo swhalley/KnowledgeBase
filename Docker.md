@@ -49,6 +49,26 @@ The command `-p 49160:8080` maps the internal docker port 8080 to the external p
 
 If your node app started a server, you can now hit the running docker container. The URL to the Docker container on mac can be found using `docker-machine ls` which will show you the installed vm's and their IP address. MAC is different from Linux installs, because there is no true native support. If using linux the IP would have been bound to 0.0.0.0 (aka localhost).
 
+# Quick Hits
+Dockerfile
+`FROM Alpine`
+    * Use Alpine for a small linux distort
+
+```
+docker run 
+-d run in background (daemon)
+-p 5432:80 <- Map 5432 inside container to 80 outside
+```
+
+`docker exec -it 9e9ff8b7870c /bin/sh`
+
+### Delete all containers, images and volumes
+`docker rm $(docker ps -a -q)`
+`docker rmi $(docker images -q)`
+`docker volume rm $(docker volume ls -qf dangling=true)`
+
+`docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -qf dangling=true)`
+
 # Mount Directory
 
 # Github integration with Docker
