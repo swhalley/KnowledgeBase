@@ -64,7 +64,9 @@ docker run
 
 ### Delete all containers, images and volumes
 `docker rm $(docker ps -a -q)`
+
 `docker rmi $(docker images -q)`
+
 `docker volume rm $(docker volume ls -qf dangling=true)`
 
 `docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -qf dangling=true)`
