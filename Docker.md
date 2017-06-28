@@ -1,4 +1,4 @@
-#Install
+# Install
 Go through these steps
 https://docs.docker.com/engine/installation/mac/
 
@@ -15,7 +15,7 @@ https://docs.docker.com/engine/installation/mac/#from-your-shell
     docker run hello-world
 
 
-#Building Own Image
+# Building Own Image
 Create a Dockerfile. This example is taken from the offical Nodejs documentation. (https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
     
     FROM node:argon
@@ -49,12 +49,12 @@ The command `-p 49160:8080` maps the internal docker port 8080 to the external p
 
 If your node app started a server, you can now hit the running docker container. The URL to the Docker container on mac can be found using `docker-machine ls` which will show you the installed vm's and their IP address. MAC is different from Linux installs, because there is no true native support. If using linux the IP would have been bound to 0.0.0.0 (aka localhost).
 
-#Mount Directory
+# Mount Directory
 
-#Github integration with Docker
+# Github integration with Docker
 
-#Frustrating Errors I ran into
-###Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+# Frustrating Errors I ran into
+### Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 This is caused because the docker default vm isn't running. To solve the problem run the following command
     
     docker-machine start default
