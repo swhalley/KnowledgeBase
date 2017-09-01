@@ -43,3 +43,9 @@ If you want to be more effective unit testing there are a few tips which can hel
    * try/catch with a print statement consumes the error, hiding and possibly never testing your asserts
    * see "Fail your test before passing"
   
+### Don't violate Law of Demeter
+   * http://wiki.c2.com/?LawOfDemeter
+   * If your unit tests have to reach through objects to talk to other objects you are not writing unit tests. Test the simplist thing possible. 
+   * When mocking and stubbing, do this one level away. don't reach through to other objects to try and mock/stub. these tests are expensive to maintain. I want to stub my dependency not my dependencies dependency. 
+
+### 
