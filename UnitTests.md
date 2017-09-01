@@ -37,3 +37,9 @@ If you want to be more effective unit testing there are a few tips which can hel
 ### Refactor Tests
   * Because a unit test is working, does not mean it isn't fragile or hard to maintain. Take time to refactor the test after you are done to ensure it is easy to read, well structured and easy to maintain.
   * Boyscout Rule
+  
+### Don't use try/catch in tests
+   * Frameworks will fail your test if an exception is thrown. Utilize this
+   * try/catch with a print statement consumes the error, hiding and possibly never testing your asserts
+   * see "Fail your test before passing"
+  
