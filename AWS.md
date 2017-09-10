@@ -34,7 +34,10 @@ This is my learning path for AWS.
  * Properties > Static Website Hosting 
  * Permissions > Bucket Policy
  
- This is where I got stuck the first time when I tried this alone. I have had experience with similar policies (firebase) but it was not clear at first glance that I needed to fill this in. All I got was an unauthorized response when I tried to access the website. I assumed setting up the domain as a static website host would take care of the permissions for me. Felt like this screen offered little help and should have been something that was part of the inital setup steps for the bucket.
+ This is where I got stuck the first time when I tried this alone. I have had experience with similar policies (firebase) but it was not clear at first glance that I needed to fill this in. All I got was an unauthorized response when I tried to access the website. I assumed setting up the domain as a static website host would take care of the permissions for me. Felt like this screen offered little help and should have been something that was part of the inital setup steps for the bucket. The setup I ended up using came after a google search and I found this.
+ http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html
+
+Copy and paste later and the site was operational.  
 4. Link Route 53 to S3
 5. Cloud Front - Https
 
