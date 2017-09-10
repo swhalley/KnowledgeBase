@@ -18,9 +18,25 @@ This is my learning path for AWS.
 
 # Phase 1 Manual
 1. Setup a Hugo Site
+   * This blog is about AWS, so I won't dwell on this. Follow the Quickstart guide to get a blog up and running in Hugo.
+   * https://gohugo.io/getting-started/quick-start/
 2. Setup A Domain via Route 53
+  
+  First step was choosing a domain where I wanted to host the website. Out of all the providers out there, I chose Route 53 to keep everything in one place with AWS. Registereing the domain was easy enough.
+  * Services > Route 53 > Register Domain
+  
+  The hardest part in this step was finding a domain that was available. I really wanted whalley.com (or .ca) so that I could use sub domains for myself, and the rest of my family. Sadly that wasn't available so after a few other tries, I realized the domain for my email was available (swhalley) so I was able to register that. There isn't anything fancy here. Find a domain that is free and signup.
+  
+  With Route 53, you are automatically signed up for a "hosted zone" which isn't in the free tier. Cost isn't much (about $0.50/month) so not a big deal. IT was a surprise to me that there was a charge above and beyond the registration feee for the domain. You would think this would just be hidden in the registration cost. The hosted zone is used to manage the DNS entries and route traffic. Nothing changed here.
+
 3. Get the Hugo Site deployed to S3 
-4. Cloud Front - Https
+ * Create a new bucket with the name of my domain
+ * Properties > Static Website Hosting 
+ * Permissions > Bucket Policy
+ 
+ This is where I got stuck the first time when I tried this alone. I have had experience with similar policies (firebase) but it was not clear at first glance that I needed to fill this in. All I got was an unauthorized response when I tried to access the website. I assumed setting up the domain as a static website host would take care of the permissions for me. Felt like this screen offered little help and should have been something that was part of the inital setup steps for the bucket.
+4. Link Route 53 to S3
+5. Cloud Front - Https
 
 # Phase 2 Automation via CI
 1. IAM Setup
