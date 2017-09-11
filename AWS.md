@@ -38,7 +38,11 @@ This is my learning path for AWS.
  http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html
 
 Copy and paste later and the site was operational.  
+
 4. Link Route 53 to S3
+DNS records and network traffic in general is not my strong point. I don't have any complicated routing or anything to do so I just need the domain to point to my bucket. This guide from AWS was helpful.
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RoutingToS3Bucket.html
+
 5. Cloud Front - Https
 
 # Phase 2 Automation via CI
