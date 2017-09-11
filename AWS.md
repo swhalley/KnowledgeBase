@@ -17,6 +17,10 @@ This is my learning path for AWS.
    * TODO
 
 # Phase 1 Manual
+
+Inspiration 
+http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html
+
 1. Setup a Hugo Site
    * This blog is about AWS, so I won't dwell on this. Follow the Quickstart guide to get a blog up and running in Hugo.
    * https://gohugo.io/getting-started/quick-start/
