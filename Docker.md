@@ -1,3 +1,7 @@
+# Out of Date
+There are old pieces here (pre v12) 
+need to include docker compose
+
 # Install
 Go through these steps
 https://docs.docker.com/engine/installation/mac/
