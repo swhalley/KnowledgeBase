@@ -51,5 +51,31 @@ http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RoutingToS3Bucket.html
 
 # Phase 2 Automation via CI
 1. IAM Setup
+Getting this setup wasn't too bad. Setup a new group with S3 admin rights. Called this travis. Then created an API user. who can not login to console.
+Concern - admin via api seems risky? can't I change this to only allow write of files, but not changing configs.
 2. Access Keys 
+Once the user was setup access keys were sitting and waiting
 3. Travis CI
+This was a pain to get hugo to build in travis. There was no content on the site. just the base site. No blogs or about pages. This caused the build in travis to fail. The error was a bit cryptic. Can find those in the Travis logs. 
+
+Getting keys generated for travis were not too bad
+```
+brew install travis
+touch .travis.yml
+travis encrypt secret_access_key="secret access key from aws" --add deploy
+```
+then open up the file and add the rest of the config
+```
+deploy:
+  provider: s3
+  access_key_id: 
+  bucket: swhalley.ca
+  skip_cleanup: true
+  region: ca-central-1
+  local_dir: public
+  secure: <encrypted key>
+```
+
+https://docs.travis-ci.com/user/deployment/s3/
+https://docs.travis-ci.com/user/encryption-keys
+https://docs.travis-ci.com/user/environment-variables/
