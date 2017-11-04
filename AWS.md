@@ -62,18 +62,19 @@ Getting keys generated for travis were not too bad
 ```
 brew install travis
 touch .travis.yml
-travis encrypt secret_access_key="secret access key from aws" --add deploy
+travis encrypt secret_access_key="secret access key from aws"
 ```
-then open up the file and add the rest of the config
+copied the output, then opened up the file and add the rest of the config
 ```
 deploy:
   provider: s3
-  access_key_id: 
+  access_key_id: <A value I dont care to share>
+  secure_access_key:
+    secure: <encrypted key>
   bucket: swhalley.ca
   skip_cleanup: true
   region: ca-central-1
   local_dir: public
-  secure: <encrypted key>
 ```
 
 https://docs.travis-ci.com/user/deployment/s3/
