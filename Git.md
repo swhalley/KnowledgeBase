@@ -56,3 +56,6 @@ jar {
 }
 
 ```
+
+# Remove Cached Files
+`git rm -r --cached .`
