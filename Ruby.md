@@ -13,3 +13,59 @@ Mac install be default, has a ruby install. This is installed in a folder that i
     * If needed, change the version 'rbenv local 2.3.0`
 * Check ruby version `ruby -v`. double check you are pointing at the correct ruby. `which ruby` can be useful as well
 * Check path to where ruby gems are stored `gem env home`. This can be useful if you are having permission issues installing gems. by using rbenv, the directory is most likely in the users home folder
+
+
+### Rails Console Cheatsheet
+Rails console allows you to interact with the ActiveRecord models
+
+Start rails console
+```
+rails c
+```
+
+View contract of the model
+```
+Article
+```
+
+Retrieve First record
+```
+Article.first
+```
+
+Retrieve first 5 records
+```
+Article.first 5
+```
+
+Create a new Record
+```
+myArticle = Article.new
+myArticle.title = 'Hello World'
+myArticle.save!
+```
+
+Find by Index Key
+```
+Article.find 123
+```
+
+Find 
+```
+Article.where( title: 'Hello World' )
+```
+
+Run last command
+```
+_
+```
+
+### Gems
+
+*awesome_print* - Allows you to call `ap <command>` to print the output in a formatted way.
+example
+```
+Article.find 123
+ap _
+```
+
