@@ -1,4 +1,4 @@
-###Installing Ruby
+### Installing Ruby
 Mac install be default, has a ruby install. This is installed in a folder that is root/admin owned. Need to install a ruby manager to install a client/user copy
 
 * Install ruby version manager `brew install rbenv`
