@@ -69,3 +69,7 @@ Article.find 123
 ap _
 ```
 
+
+### Resources and Links
+
+https://guides.rubyonrails.org/active_record_basics.html
