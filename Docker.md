@@ -1,3 +1,23 @@
+# docker and compose commands
+
+### Restart Docker
+Good for development, this command stops the last running instance of docker, cleans up running containers and then starts up a fresh instance. Building new containers each time
+
+`docker-compose down -v --remove-orphans && docker-compose up --build -d`
+
+### System Information
+How much disk space docker is currently using
+
+`docker system df`
+```
+TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+Images              10                  3                   3.828GB             3.515GB (91%)
+Containers          3                   2                   63B                 0B (0%)
+Local Volumes       32                  1                   1.926GB             1.877GB (97%)
+Build Cache         0                   0                   0B                  0B
+```
+
+
 # Out of Date
 There are old pieces here (pre v12) 
 need to include docker compose
