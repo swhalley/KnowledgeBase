@@ -1,7 +1,7 @@
 # docker and compose commands
 
 ### Restart Docker
-Good for development, this command stops the last running instance of docker, cleans up running containers and then starts up a fresh instance. Building new containers each time
+Good for development, this command stops the last running instance of docker, cleans up running containers and then starts up a fresh instance. Building new containers each time. via Cristian T 2019-05-13
 
 `docker-compose down -v --remove-orphans && docker-compose up --build -d`
 
