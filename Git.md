@@ -57,5 +57,7 @@ jar {
 
 ```
 
+Additionally `git describe --tags --abbrev=0` will give the tag without the commit hash
+
 # Remove Cached Files
 `git rm -r --cached .`
