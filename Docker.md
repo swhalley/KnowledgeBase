@@ -17,6 +17,10 @@ Local Volumes       32                  1                   1.926GB             
 Build Cache         0                   0                   0B                  0B
 ```
 
+### Clean up old images who have no tag "<none>"
+    
+`docker rmi $( docker images | grep '^<none>' | awk '{print $3}' )`
+
 
 # Out of Date
 There are old pieces here (pre v12) 
