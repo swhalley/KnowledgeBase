@@ -8,6 +8,9 @@
 * You have to embrace change. You can not be talking about how it used to be. The way it used to be is not the way it is. Forget about how it will be, that will take care of itself if you take care of what it is right now. Embrace the moment that you are in with the people your in with. - Coach K (A basketball coach calling this agile learning)
 * You never fail until you stop trying - Albert Einstein
 * You never really fail until the moment you quit - Classified
+* If you want to go fast, go alone. If you want to go far, go together --African proverb
+* Let's all be better than we were yesterday
+
 
 # Tips
 
